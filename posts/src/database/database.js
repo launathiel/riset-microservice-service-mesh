@@ -3,7 +3,7 @@
 
 const mongoose = require('mongoose');
 
-const connectDB = async () => {
+module.exports = async () => {
   const connectionString = 'mongodb://root:nathan123@localhost';
   try {
     const conct = await mongoose.connect(connectionString, {
@@ -18,4 +18,3 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
