@@ -9,7 +9,7 @@ export default() => {
 
     const fetchFost = async () => {
         const res = await axios.get('http://localhost:4000/posts');
-        console.log("getting data ... ", res.data.data)
+        console.log("getting post data ... ", res.data.data)
         setPosts(res.data.data)
     }
 
@@ -23,8 +23,8 @@ export default() => {
             <div className='card' style={{width: '30%', marginBottom: '20px'}} key={post._id}>
                 <div className='card-body'>
                     <h3>{post.title}</h3>
-                    {/* <CommentList postId={post.id} />
-                    <CommentCreate postId={post.id} /> */}
+                    <CommentList postId={post._id} />
+                    <CommentCreate postId={post._id} />
                 </div>
             </div>
         )
