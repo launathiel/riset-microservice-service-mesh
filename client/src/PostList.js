@@ -9,8 +9,8 @@ export default() => {
 
     const fetchFost = async () => {
         const res = await axios.get('http://localhost:4000/posts');
-        console.log("getting post data ... ", res.data.data)
-        setPosts(res.data.data)
+        console.log("getting post data ... ", res.data.data);
+        setPosts(res.data.data);
     }
 
     useEffect(() => {
@@ -18,8 +18,7 @@ export default() => {
     }, []);
 
     const renderedPosts = Object.values(posts).map(post => {
-        return ( 
-            
+        return (           
             <div className='card' style={{width: '30%', marginBottom: '20px'}} key={post._id}>
                 <div className='card-body'>
                     <h3>{post.title}</h3>
