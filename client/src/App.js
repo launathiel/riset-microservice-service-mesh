@@ -8,7 +8,6 @@ export default() => {
         <h1>Post Create</h1>
         <PostCreate />
         <hr />
-        {/* <h2>{`hello ${process.env.MESSAGE}`}</h2> */}
         <h1>Posts</h1>
         <PostList />
     </div>
